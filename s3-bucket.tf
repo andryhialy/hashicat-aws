@@ -1,12 +1,4 @@
-module "s3_bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
-
-  bucket = "my-s3-bucket-2023-05-27"
-  acl    = "private"
-  prefix = var.prefix
-
-  versioning = {
-    enabled = true
-  }
-
+module "s3-bucket" {
+  source  = "app.terraform.io/andryhialy-hashicat-aws/s3-bucket/aws"
+  version = "2.8.0"
 }
